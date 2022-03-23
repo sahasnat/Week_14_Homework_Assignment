@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Tech Blog</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+      <header class="mainHeader">
+          <div>
+            <nav class="nav">
+                    <a class="link" href="/">Home</a>
+    
+                    <a style="padding:5px;" class="link" href="/dashboard">Dashboard</a>
+                    {{#if loggedIn}}
+                     <button class="no-button" id="logout">Logout</button>
+                    {{else}}
+                   <a style="padding:5px;" class="link" href="/login">Login</a>
+                   <a style="padding:5px;" class="link" href="/signup">SignUp</a>
+                    {{/if}}
+                </nav>          
+          </div>
+
+          <h1 class="Blog-title"><i class="fab "></i>Blue Tech Blog</h1>
+      </header>
+
+    <main>
+      {{{ body }}}
+    </main>
+  </div>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+</html>

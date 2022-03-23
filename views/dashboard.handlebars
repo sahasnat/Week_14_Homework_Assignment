@@ -1,0 +1,16 @@
+
+{{#if posts.length}}
+<section style="align-items:center;">
+  <h2 style="color:rgb(21, 21, 116); text-align:center; background-color: white;">Your Posts</h2>
+  <h4 style="color:#ca5206; text-align:center; background-color: white;">Your post link is available in the box below for update/delete.</h4>
+    {{#each posts as |post|}}
+      {{> dashboard-postinfo post}}
+    {{/each}}
+
+</section>
+{{/if}}
+
+<button type="submit" class="btn"><a style="color:white;" class="link" href="/dashboard/new">+ New Post</a></button>
+
+
+<script src="/js/newPost.js"></script>

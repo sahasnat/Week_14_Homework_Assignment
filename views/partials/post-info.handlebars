@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header">
+       <h3 style="color: white;">Post: <a class="link" style="color:#948df8;" href="/posts/{{id}}">{{title}}</a></h3>
+        <p style="color:rgb(21, 21, 116);" class="card-body">{{content}}</p>
+        <p style="background-color:#ccdad1; color:rgb(21, 21, 116);">Posted by {{user.username}} on {{format_date created_at}}</p>
+        
+        {{> comments post.comments}}
+    </div>
+</div>

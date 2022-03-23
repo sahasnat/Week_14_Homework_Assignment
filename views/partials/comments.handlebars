@@ -1,0 +1,18 @@
+<div class="comments">
+  {{#each this}}
+    <div class="card">
+        <h5 style="background-color:#f8ac81; color:rgb(21, 21, 116);" class="card-header">Comment</h5>
+        <section class="comment card-body">
+            <div class="text">
+                {{comment_text}}
+            </div>
+            <div class="meta">
+                -{{user.username}}, {{format_date created_at}}
+            </div>
+        </section>
+    </div>
+  {{/each}}
+  
+</div>
+
+
